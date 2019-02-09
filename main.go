@@ -1,15 +1,16 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"github.com/Adron/learning-go-episode-5/universe"
+)
 
 func main() {
 
-	choose := false
+	p := universe.Point{12.2, 13.4}
+	q := universe.Point{29.92, 123.1}
 
-	if choose {
-		fmt.Println("All is well.")
-	} else {
-		panic(fmt.Sprintln("Oh my gerd! Ugh this!"))
-	}
+	result := universe.Distance(p, q)
 
+	fmt.Println(result)
 }
